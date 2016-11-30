@@ -89,9 +89,9 @@
       <SourceIndexCmd>$(HtmlGeneratorExePath)</SourceIndexCmd>
       <SourceIndexCmd>$(SourceIndexCmd) /out:$(OutDir)index/</SourceIndexCmd>
       <SourceIndexCmd>$(SourceIndexCmd) /in:$(OutDir)index.list</SourceIndexCmd>
-      <SourceIndexCmd>$(SourceIndexCmd) /p:LiveReferenceCacheFile=$(OutDir)reference-cache.json</SourceIndexCmd>
+      <!--<SourceIndexCmd>$(SourceIndexCmd) /p:LiveReferenceCacheFile=$(OutDir)reference-cache.json</SourceIndexCmd>
       <SourceIndexCmd>$(SourceIndexCmd) /p:SourceIndexerTasksAssembly=$(SourceIndexerTasksAssembly)</SourceIndexCmd>
-      <SourceIndexCmd>$(SourceIndexCmd) /p:CustomAfterBuildCommonTargets=$(MSBuildThisFileDirectory)/SourceIndex.targets</SourceIndexCmd>
+      <SourceIndexCmd>$(SourceIndexCmd) /p:CustomAfterBuildCommonTargets=$(MSBuildThisFileDirectory)/SourceIndex.targets</SourceIndexCmd>-->
       <SourceIndexCmd>$(SourceIndexCmd)@(ClonedRepository -> ' /serverPath:"%(LocalPath)=%(ServerPath)"', '')</SourceIndexCmd>
     </PropertyGroup>
     <Exec Command="$(SourceIndexCmd)"/>
